@@ -1,5 +1,5 @@
 ### DeepKneeExplainer
-Code and supplementary materials for our paper titled "DeepKneeExplainer: Explainable Knee Osteoarthritis Diagnosis from Radiographs and Magnetic Resonance Images", submitted to Elsevier Engineering Applications of Artificial Intelligence journal. There are only codes with simple file structures. Other codes, trained models and processed images are in the path /data/jiao of our GPU server. There would be another ReadMe file. So codes uploaded here are separated by steps in the pipeline. In each Python file, there are several comments so that you can know where to change.
+Code and supplementary materials for our paper titled "DeepKneeExplainer: Explainable Knee Osteoarthritis Diagnosis from Radiographs and Magnetic Resonance Images", submitted to IEEE Access journal. There are only codes with simple file structures. 
 
 #### Methods
 In general, first run codes for different modalities in Preprocessing folder, then you get processed images, which are the inputs of ROI step. ROI steps also need labelled bounding boxes. After ROI steps, you'll get the segmentation results, which can be dealt with function cv2.findContours() and boundingRect() in OpenCV. Alternatively, it can be done with FRCNN. From extracted ROIs, you can run classifier codes, then you will get trained models, which can be run for Grad-CAM, Grad-CAM++, and LRP visualizations. For classifiers, run VGG_new.py for VGG, ResNet_newJSN.py for ResNet and DenseNet_newJSN.py for DenseNet.
@@ -28,8 +28,8 @@ If you use the code of this repository in your research, please consider citing 
     @inproceedings{karim2020DeepKneeXAI,
         title={DeepKneeExplainer: Explainable Knee Osteoarthritis Diagnosis from Radiographs and Magnetic Resonance Images},
         author={Karima, Md. Rezaul and Jiao, Jiaob and Döhmena, Till and Cochez, Michael and Beyan, Oya and Rebholz-Schuhmannd, Dietrich and Deckera, Stefan},
-        journal={Engineering Applications of Artificial Intelligence},
-        publisher={Elsevier (under review)},
+        journal={IEEE Access},
+        publisher={IEEE (under review)},
         year={2020}
     }
 
